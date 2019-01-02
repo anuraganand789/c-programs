@@ -7,6 +7,10 @@ void print_string ( char *string_val) {
   printf ("The sizeof input string is %lu \n" , sizeof(string_val));
 }
 
+void skip(char *msg){
+  puts(msg+6);
+}
+
 void main() {
   int age = 12;
 
@@ -29,4 +33,7 @@ void main() {
 
   int doses[] = {1, 3, 2, 1000};
   printf(" Issue does %i \n" , 0[doses]);
+
+  char *msg_from_amy = "Don't call me";
+  skip(msg_from_amy);
 }
