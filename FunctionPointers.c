@@ -55,7 +55,9 @@ void main() {
   for(int i = 0; i < 4; ++i) {
     printf("%s \n", names[i]);
   }
-  
+
+  //Array of Pointers
+  int (* functions []) (const void*, const void*) = { compareScores, compareStrings, compareAreas };
 }
 
 int age(int a, long l, double d) {}
