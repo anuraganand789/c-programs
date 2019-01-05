@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 int age(int, long, double);
 
@@ -30,6 +32,13 @@ int compareAreas(const void *rect1, const void *rect2) {
   return compareScores(&area1, &area2);
 }
 
+int compareStrings(const void *str1, const void *str2) {
+  char *word1 = * (char **) str1;
+  char *word2 = * (char **) str2;
+
+  return strcmp(word1, word2);
+}
+
 void main() {
   int (*pointerToAgeFunction) (int, long, double) = age;
   Rectangle rect1 = {12, 14};
@@ -41,6 +50,11 @@ void main() {
     printf("Area of rectangle1 is bigger than area of rectangle2");
   }
 
+  char *names[] = {"Anurag", "Anand", "Nishant", "Gupta"};
+  qsort(names, 4, sizeof(char *), compareStrings);
+  for(int i = 0; i < 4; ++i) {
+    printf("%s \n", names[i]);
+  }
   
 }
 
