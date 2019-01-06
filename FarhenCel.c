@@ -12,7 +12,9 @@ int farheToCel(int farhen) {
 void main() {
   printf("%d \n" , farheToCel(20));
   int c ;
-  while((c = getchar()) != EOF) {
-    putchar(c);
-  }
+  //while((c = getchar()) != EOF) {
+  // putchar(c);
+  //}
+  printf("%d \n" , (getchar() != EOF));
+  printf(" %d \n " , EOF);
 }
