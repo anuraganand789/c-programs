@@ -1,0 +1,20 @@
+# Makefile
+CC=gcc
+LIBS=-lncurses
+
+SRC_DIR=.
+OUT_DIR=executables
+
+OUTS = \
+    ${OUT_DIR}/bouncingball \
+
+${OUT_DIR}/%: %.o
+	${CC} -o $@ $< ${LIBS}
+
+%.o: ${SRC_DIR}/%.c
+	${CC} -o $@ -c $<
+
+all:    ${OUTS}
+
+clean:
+	@rm -f ${OUTS}
