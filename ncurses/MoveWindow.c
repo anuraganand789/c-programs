@@ -115,6 +115,7 @@ void create_box(struct Win *win, bool flag) {
     mvvline(y+1, x, ls, h-1);
     mvvline(y+1, x+w, rs, h-1);
   } else {
+    //this clears charachters left from old windows
     for(j = y; j<= y+h; ++j){
       for(i=x; i <= x + w; ++i) {
 	mvaddch(j, i, ' ');
