@@ -2,6 +2,17 @@
 <configurationDescriptor version="100">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <df root="." name="0">
+      <df name="algo">
+        <df name="search">
+          <in>BinarySearch.c</in>
+          <in>linear-search.c</in>
+        </df>
+        <df name="sort">
+          <in>Bubble.c</in>
+          <in>Insertion.c</in>
+          <in>Selection.c</in>
+        </df>
+      </df>
       <df name="datastructures">
         <df name="arrays">
           <in>delete_in_array.c</in>
