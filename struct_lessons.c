@@ -14,21 +14,21 @@ typedef struct  {
 
 
 
-void label(Fish);
+void label(Fish *);
 void catalog(Fish);
 
 
   
 void main() {
   Fish snappy = {"Snappy", "Piranha", 4, 69, {"Meat", 7.5}};
-  label(snappy);
+  label(&snappy);
   snappy.age = 12;
   printf("%i\n" , snappy.age);
   catalog(snappy);
 }
 
-void label(Fish aFish) {
-  printf("Name :- %s - age :- %i\n", aFish.name, aFish.age);
+void label(Fish *aFish) {
+  printf("Name :- %s - age :- %i\n", aFish->name, aFish->age);
 }
 
 void catalog(Fish aFish) {
